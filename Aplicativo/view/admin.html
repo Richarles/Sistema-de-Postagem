@@ -1,0 +1,20 @@
+<h2>Administração</h2>
+<h1>Gerenciador de Conteúdo</h1>
+
+<a href="http://localhost/projetos_php//MVC_php/?pagina=admin&metodo=adicionarplanetas">Nova Publicação</a><br><br>
+<hr>
+<br><table>
+    {% for planeta in planetas  %}
+	<tr>
+        <th>{{planeta.idplanetas}}</th>
+        <th>{{planeta.nome}}</th>
+		<th><a href="http://localhost/projetos_php//MVC_php/?pagina=admin&metodo=alterarPlanetas&idplanetas={{planeta.idplanetas}}">Alterar</a></th>
+		<th><a href="http://localhost/projetos_php//MVC_php/?pagina=admin&metodo=deletePlaneta&idplanetas={{planeta.idplanetas}}">DELETAR</a></th>
+    </tr>
+    {% endfor %}
+
+
+	
+    
+
+</table>

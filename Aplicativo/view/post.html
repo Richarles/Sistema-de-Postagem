@@ -1,0 +1,31 @@
+<section>
+    <article>
+        <header>
+            <h2>{{nome}}</h2>
+        </header>
+        <p>{{descobridor}}</p>
+        <p>{{ano}}</p>
+        <p>{{descricao}}</p>
+        <br>
+        <hr>
+        <br>
+        <form method="post" action="http://localhost/projetos_php//MVC_php/?pagina=planeta&&metodo=addComentario">
+            <span>Nome:</span><br>
+            <input type="text" name="nome"><br><br>
+            <span>Mensagem:</span><br>
+            <textarea name="comentario"></textarea><br><br>
+            <input type="hidden" name="idplanetas" value="{{idplanetas}}">
+            <input type="submit" value="COMENTAR">
+        </form>
+        {% if comentarios == false %}
+        <p>Não foi encontrado nenhuma postagem. </p>
+        {% else %}
+        {% for coment in comentarios %}
+        <h3>{{coment.nome}}</h3>
+        <p>{{coment.comentario}}</p>
+        <br>
+         {% endfor %}
+         {% endif %}
+
+    </article>
+    </section>

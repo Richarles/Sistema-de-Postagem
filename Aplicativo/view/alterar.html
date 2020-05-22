@@ -1,0 +1,16 @@
+<h1>Alterar Publicação</h1>
+
+<form method="post" action="?pagina=admin&metodo=update">
+	<span>Título</span><br>
+	<input type="text" name="nome" value="{{nome}}"><br><br>
+	<span>Descobridor</span><br>
+	<input type="text" name="descobridor" value="{{descobridor}}"><br><br>
+	<span>Ano</span><br>
+	<input type="text" name="ano" value="{{ano}}"><br><br>
+	
+    <span>Descrição</span><br>
+    <textarea name="descricao" cols="25" rows="5" >{{descricao}}</textarea><br><br>
+    <input type="hidden" name="idplanetas" value="{{idplanetas}}">
+
+    <input type="submit" value="Alterar">
+</form>

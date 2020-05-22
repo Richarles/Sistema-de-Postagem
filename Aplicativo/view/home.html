@@ -1,0 +1,10 @@
+<section>
+    {% for planeta in planetas %}
+    <article>
+        <header>
+            <h2><a href="http://localhost/projetos_php//MVC_php/?pagina=planeta&idplanetas={{planeta.idplanetas}}">{{planeta.nome}}</a></h2>
+        </header>
+        <p>{{planeta.descricao}}</p>
+    </article>
+    {% endfor %}
+</section>
